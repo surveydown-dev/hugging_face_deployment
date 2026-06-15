@@ -1,6 +1,6 @@
 ---
 name: surveydown
-description: End-to-end skill for surveydown — the R + Quarto + Shiny survey platform. Covers building/creating surveys and deploying them to hosts. Implemented now: deploying the survey templates to Hugging Face Spaces (Docker SDK) from their GitHub repos via a shared Dockerfile and a generator script. Planned: creating a survey from scratch, and deploying to Posit Connect Cloud. Use whenever working with surveydown surveys — authoring or hosting.
+description: End-to-end skill for surveydown — the R + Quarto + Shiny survey platform. Covers authoring surveys and deploying them to hosts. Implemented now, deploying the survey templates to Hugging Face Spaces (Docker SDK) from their GitHub repos via a shared Dockerfile and a generator script. Planned, creating a survey from scratch and deploying to Posit Connect Cloud. Use whenever working with surveydown surveys — authoring or hosting.
 ---
 
 # Skill: surveydown
