@@ -1,0 +1,9 @@
+.git
+.gitattributes
+*.Rproj
+_survey
+preview_data.csv
+rsconnect
+manifest.json
+.posit
+.DS_Store

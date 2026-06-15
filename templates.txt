@@ -1,0 +1,21 @@
+# One template repo per line (under the GitHub org configured in deploy.sh).
+# The HF Space name is derived automatically: drop the "template_" prefix and
+# turn underscores into dashes, e.g. template_question_types -> question-types.
+# Lines starting with # and blank lines are ignored.
+template_conditional_showing
+template_conditional_skipping
+template_conditional_stopping
+template_conjoint_buttons
+template_conjoint_tables
+template_custom_leaflet_map
+template_custom_plotly_chart
+template_default
+template_external_redirect
+template_live_polling
+template_option_shuffling
+template_question_types
+template_questions_yml
+template_random_options
+template_random_options_predefined
+template_reactive_drilldown
+template_reactive_questions
