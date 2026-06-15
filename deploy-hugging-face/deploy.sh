@@ -82,8 +82,11 @@ mkdir "$tmp/space"
 
 echo ">>> $DIR  ->  $owner/$name"
 
-# 1. Copy the survey's files, excluding build artifacts and dev/meta junk
-EXCLUDES=(.git .gitignore .gitattributes _survey survey_files survey.html preview_data.csv rsconnect manifest.json .posit .Rproj.user .DS_Store)
+# 1. Copy the survey's files, excluding build artifacts, dev/meta junk, and
+#    SECRETS. .env / .Renviron hold database credentials and must NEVER be pushed
+#    to a (public) Space — set those as Space Secrets in the Hugging Face UI
+#    instead; sd_db_connect() reads them from the environment.
+EXCLUDES=(.git .gitignore .gitattributes .env .Renviron _survey survey_files survey.html preview_data.csv rsconnect manifest.json .posit .Rproj.user .Ruserdata .DS_Store)
 if command -v rsync >/dev/null 2>&1; then
   rsync_args=()
   for e in "${EXCLUDES[@]}"; do rsync_args+=(--exclude="$e"); done
