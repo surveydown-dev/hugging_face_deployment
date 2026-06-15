@@ -1,4 +1,4 @@
-# surveydown_skill
+# surveydown-skill
 
 A skill for working with [surveydown](https://surveydown.org) surveys — authoring
 and deploying them.
@@ -18,8 +18,8 @@ Clone the repo, then run the installer. It symlinks the skill into
 `~/.claude/skills/surveydown`, so `git pull` later updates it instantly.
 
 ```bash
-git clone https://github.com/surveydown-dev/surveydown_skill.git
-cd surveydown_skill
+git clone https://github.com/surveydown-dev/surveydown-skill.git
+cd surveydown-skill
 ./install.sh
 ```
 
@@ -28,7 +28,7 @@ Start a new Claude Code session and the `surveydown` skill is available.
 Prefer one line and no scripts? Clone straight into the skills directory:
 
 ```bash
-git clone https://github.com/surveydown-dev/surveydown_skill.git ~/.claude/skills/surveydown
+git clone https://github.com/surveydown-dev/surveydown-skill.git ~/.claude/skills/surveydown
 ```
 
 ## Update
