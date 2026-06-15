@@ -3,7 +3,7 @@
 A skill for working with [surveydown](https://surveydown.org) surveys — authoring
 and deploying them.
 
-👉 **Start with [`skills/surveydown/SKILL.md`](skills/surveydown/SKILL.md)**, which
+👉 **Start with [`SKILL.md`](SKILL.md)**, which
 routes to the right task doc.
 
 ## What it covers
@@ -16,8 +16,8 @@ routes to the right task doc.
 | Deploy to Posit Connect Cloud | 🚧 under construction |
 
 The Hugging Face deployment is fully implemented — see
-[`skills/surveydown/resources/hugging-face-deployment.md`](skills/surveydown/resources/hugging-face-deployment.md)
-(tooling in [`skills/surveydown/hugging-face/`](skills/surveydown/hugging-face/)).
+[`resources/hugging-face-deployment.md`](resources/hugging-face-deployment.md)
+(tooling in [`hugging-face/`](hugging-face/)).
 The other topics are stubbed and being filled in.
 
 ## Install (Claude Code)
