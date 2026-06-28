@@ -10,20 +10,20 @@ routes to the right task doc.
 
 | Task | Status |
 |------|--------|
-| Create a new survey | 🚧 under construction |
-| Connect a database to store responses | 🚧 under construction |
+| Create a new survey | ✅ available |
+| Connect a database to store responses | ✅ available |
 | Deploy to Hugging Face Spaces | ✅ available |
 | Deploy to Google Cloud Run | ✅ available |
-| Deploy to Posit Connect Cloud | 🚧 under construction |
+| Deploy to Posit Connect Cloud | ✅ available |
 
 Each section lives in its own folder with a `README.md` guide and its tooling.
-The Hugging Face and Google Cloud Run deployments are fully implemented — see
-[`deploy-hugging-face/`](deploy-hugging-face/README.md) and
-[`deploy-google-cloud/`](deploy-google-cloud/README.md). The other section folders
-([`create-survey/`](create-survey/README.md),
-[`connect-database/`](connect-database/README.md),
-[`deploy-posit-cloud/`](deploy-posit-cloud/README.md)) are stubbed and being
-filled in.
+Authoring starts with [`create-survey/`](create-survey/README.md) (scaffold from a
+template or compose a custom survey) and, once a survey exists,
+[`connect-database/`](connect-database/README.md) (wire it to PostgreSQL/Supabase
+and switch to `mode: database`). Deployment is fully implemented for all three
+hosts — [`deploy-hugging-face/`](deploy-hugging-face/README.md),
+[`deploy-google-cloud/`](deploy-google-cloud/README.md), and
+[`deploy-posit-cloud/`](deploy-posit-cloud/README.md).
 
 ## Install (Claude Code)
 

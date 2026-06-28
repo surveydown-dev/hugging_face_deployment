@@ -1,6 +1,6 @@
 ---
 name: surveydown-skill
-description: End-to-end skill for surveydown — the R + Quarto + Shiny survey platform. Covers creating a survey, connecting a database to store responses, deploying to Hugging Face Spaces, Google Cloud Run, and Posit Connect Cloud, and recording a local video walkthrough of a survey. Implemented now are Hugging Face Spaces, Google Cloud Run, and Posit Connect Cloud deployment (which work on any surveydown survey via a generator script that packages and deploys it), plus a macOS record-video tool that drives a survey in a visible browser and screen-captures the run. Creating a survey and connecting a database are under construction. Use whenever working with surveydown surveys — authoring, hosting, or demoing.
+description: End-to-end skill for surveydown — the R + Quarto + Shiny survey platform. Covers creating a survey, connecting a database to store responses, deploying to Hugging Face Spaces, Google Cloud Run, and Posit Connect Cloud, and recording a local video walkthrough of a survey. Creating a survey scaffolds from the 17 official templates (or composes a custom one); connecting a database wires a survey to PostgreSQL/Supabase and flips it to mode: database. Deployment to Hugging Face Spaces, Google Cloud Run, and Posit Connect Cloud works on any surveydown survey via a generator script that packages and deploys it, plus a macOS record-video tool that drives a survey in a visible browser and screen-captures the run. Use whenever working with surveydown surveys — authoring, hosting, or demoing.
 ---
 
 # Skill: surveydown-skill
@@ -12,8 +12,8 @@ The skill is organized into one folder per section, each with a `README.md` guid
 
 | Task | Status | Section |
 |------|--------|---------|
-| Create a new survey | 🚧 under construction | [`create-survey/`](create-survey/README.md) |
-| Connect a database to store responses | 🚧 under construction | [`connect-database/`](connect-database/README.md) |
+| Create a new survey | ✅ implemented | [`create-survey/`](create-survey/README.md) |
+| Connect a database to store responses | ✅ implemented | [`connect-database/`](connect-database/README.md) |
 | Deploy to **Hugging Face Spaces** (Docker) | ✅ implemented | [`deploy-hugging-face/`](deploy-hugging-face/README.md) |
 | Deploy to **Google Cloud Run** (Docker) | ✅ implemented | [`deploy-google-cloud/`](deploy-google-cloud/README.md) |
 | Deploy to **Posit Connect Cloud** (rsconnect) | ✅ implemented | [`deploy-posit-cloud/`](deploy-posit-cloud/README.md) |
@@ -40,6 +40,23 @@ Workflow:
 
 This index is regenerated on every site build, so it always reflects the current
 docs. Treat it as the source of truth over any memorized detail.
+
+## Authoring workflow: create first, then connect a database
+
+The two authoring tasks have an order — respect it:
+
+- **Creating a survey can start on its own.** It's usually the first thing a user
+  does, and it needs no prior survey. If the user wants to make a survey, go
+  straight to [`create-survey/`](create-survey/README.md): ask *what* survey
+  (minimum/default template, a themed showcase, or a custom one they describe), then
+  scaffold `survey.qmd` + `app.R`.
+- **Connecting a database always needs an existing survey.** A DB connection only
+  makes sense attached to a `survey.qmd` + `app.R`. So when the user asks to connect
+  a database, **first locate the survey** (ask which one, or search for an `app.R` +
+  `survey.qmd` folder). **If there is no survey, route into
+  [`create-survey/`](create-survey/README.md) first**, then return to
+  [`connect-database/`](connect-database/README.md). Never connect a database to
+  nothing.
 
 ## Deploying? Pick a platform first
 
